@@ -1,4 +1,7 @@
+#! /usr/bin/env python3
+
 import os, sys
+
 
 def make_dirs():
     root = os.getcwd()
@@ -14,7 +17,7 @@ def make_dirs():
         os.mkdir(os.path.join(root, parent))
         for sub in subs:
             os.mkdir(os.path.join(root, parent, sub))
-            
+
 if __name__ == '__main__':
     if len(sys.argv) == 1:
         make_dirs()
